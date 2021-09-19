@@ -7,10 +7,12 @@ ARG BUILD_DATE
 ARG VERSION
 LABEL build_version="Neo version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 
+# package version
+ARG LUADCHVER="2.22"
 
 # install dependencies
 RUN apk add --no-cache \
-     git \
+     wget \
      rsync \
      libstdc++ \
      openssl && \
@@ -24,11 +26,13 @@ RUN apk add --no-cache \
         openssl-dev && \
 
  cd /app && \
- git clone https://github.com/luadch/luadch.git && \
- cd /app/luadch/ && \
- /app/luadch/compile && \
- mv /app/luadch/build_gcc/luadch/* /app/dchub && \
- rm -rf /app/luadch && \
+ wget https://github.com/luadch/luadch/archive/v$LUADCHVER.tar.gz && \
+ tar zxvf /app/v$LUADCHVER.tar.gz && \
+ rm /app/v$LUADCHVER.tar.gz && \
+ cd /app/luadch-$LUADCHVER/ && \
+ /app/luadch-$LUADCHVER/compile && \
+ mv /app/luadch-$LUADCHVER/build_gcc/luadch/* /app/dchub && \
+ rm -rf /app/luadch-$LUADCHVER && \
  rm -rf /app/cfg && \
  rm -rf /app/log && \
  rm -rf /app/certs && \
