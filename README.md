@@ -12,5 +12,5 @@ docker run -d --name=luadch
 -p 5000:5000
 -p 5001:5001
 -v "/share/Container/luadch:/config"
-docker pull hawkinzzz/luadch
+docker pull hawkinzzz/luadch:lastest
 ```
