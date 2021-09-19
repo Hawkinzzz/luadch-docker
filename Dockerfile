@@ -31,7 +31,7 @@ RUN apk add --no-cache \
  rm /app/v$LUADCHVER.tar.gz && \
  cd /app/luadch-$LUADCHVER/ && \
  /app/luadch-$LUADCHVER/compile && \
- mv /app/luadch-$LUADCHVER/build_gcc/luadch/* /app/dchub && \
+ mv /app/luadch-$LUADCHVER/build_gcc/luadch/* /app/ && \
  rm -rf /app/luadch-$LUADCHVER && \
  rm -rf /app/cfg && \
  rm -rf /app/log && \
