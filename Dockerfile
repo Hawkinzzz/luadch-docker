@@ -25,12 +25,12 @@ RUN apk add --no-cache \
  git clone https://github.com/luadch/luadch.git && \
  cd /app/luadch/ && \
  /app/luadch/compile && \
- mv /app/luadch/build_gcc/luadch/* /config/ && \
- #rm -rf /app/luadch && \
- #rm -rf /app/cfg && \
- #rm -rf /app/log && \
- #rm -rf /app/certs && \
- #rm -rf /app/scripts/lang && \
+ mv /app/luadch/build_gcc/luadch/* /luadch/ && \
+ rm -rf /app/luadch && \
+ rm -rf /app/cfg && \
+ rm -rf /app/log && \
+ rm -rf /app/certs && \
+ rm -rf /app/scripts/lang && \
 
 # cleanup
 apk del --purge \
