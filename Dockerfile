@@ -1,7 +1,5 @@
 FROM lsiobase/alpine:3.12
 
-MAINTAINER Neo
-
 # set version label
 ARG BUILD_DATE
 ARG VERSION
