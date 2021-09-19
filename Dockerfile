@@ -1,6 +1,5 @@
 FROM lsiobase/alpine:3.12
 
-MAINTAINER Neo
 
 # set version label
 ARG BUILD_DATE
@@ -22,18 +21,17 @@ RUN apk add --no-cache \
         make \
         lua-dev \
         openssl-dev && \
-
  cd /app && \
  git clone https://github.com/luadch/luadch.git && \
  cd /app/luadch/ && \
  /app/luadch/compile && \
- mv /app/luadch/build_gcc/luadch/* /app/dchub && \
- rm -rf /app/luadch && \
- rm -rf /app/cfg && \
- rm -rf /app/log && \
- rm -rf /app/certs && \
- rm -rf /app/scripts/lang && \
- 
+ mv /app/luadch/build_gcc/luadch/* /config/ && \
+ #rm -rf /app/luadch && \
+ #rm -rf /app/cfg && \
+ #rm -rf /app/log && \
+ #rm -rf /app/certs && \
+ #rm -rf /app/scripts/lang && \
+
 # cleanup
 apk del --purge \
         build-dependencies && \

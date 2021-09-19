@@ -1,5 +1,0 @@
-﻿return {
-
-    msg_sharelimits = "Hub min/max Share: %s/%s  Dein Share: %s",
-
-}

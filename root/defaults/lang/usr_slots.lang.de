@@ -1,5 +1,0 @@
-﻿return {
-
-    msg_slotlimits = "Hub min Slots: %s  |  Hub max Slots: %s  |  Deine Slots: %s",
-
-}
