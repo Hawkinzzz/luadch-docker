@@ -14,7 +14,6 @@ RUN apk add --no-cache \
      rsync \
      libstdc++ \
      openssl && \
-
 # install build packages
  apk add --no-cache --virtual=build-dependencies \
         g++ \
@@ -22,7 +21,6 @@ RUN apk add --no-cache \
         make \
         lua-dev \
         openssl-dev && \
-
  cd /app && \
  wget https://github.com/luadch/luadch/archive/v$LUADCHVER.tar.gz && \
  tar zxvf /app/v$LUADCHVER.tar.gz && \
@@ -35,7 +33,6 @@ RUN apk add --no-cache \
  rm -rf /app/log && \
  rm -rf /app/certs && \
  rm -rf /app/scripts/lang && \
- 
 # cleanup
 apk del --purge \
         build-dependencies && \
