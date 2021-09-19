@@ -26,11 +26,11 @@ RUN apk add --no-cache \
  cd /app/luadch/ && \
  /app/luadch/compile && \
  mv /app/luadch/build_gcc/luadch/* /luadch/ && \
- rm -rf /app/luadch && \
- rm -rf /app/cfg && \
- rm -rf /app/log && \
- rm -rf /app/certs && \
- rm -rf /app/scripts/lang && \
+ #rm -rf /app/luadch && \
+ #rm -rf /app/cfg && \
+ #rm -rf /app/log && \
+ #rm -rf /app/certs && \
+ #rm -rf /app/scripts/lang && \
 
 # cleanup
 apk del --purge \
