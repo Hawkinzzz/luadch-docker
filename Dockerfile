@@ -22,11 +22,11 @@ RUN apk add --no-cache \
         lua-dev \
         openssl-dev && \
  cd /app && \
- git clone https://github.com/luadch/luadch.git && \
- cd /app/luadch/ && \
- /app/luadch/compile && \
- mv /app/luadch/build_gcc/luadch/* /app/ && \
- rm -rf /app/luadch && \
+ git clone https://github.com/luadch/luadch.git dchub && \
+ cd /app/dchub/ && \
+ /app/dchub/compile && \
+ mv /app/dchub/luadch/build_gcc/luadch/* /app/ && \
+ rm -rf /app/dchub && \
  rm -rf /app/cfg && \
  rm -rf /app/log && \
  rm -rf /app/certs && \
