@@ -25,7 +25,7 @@ RUN apk add --no-cache \
  git clone https://github.com/luadch/luadch.git && \
  cd /app/luadch/ && \
  /app/luadch/compile && \
- mv /app/luadch/build_gcc/luadch/* /luadch/ && \
+ mv /app/luadch/build_gcc/luadch/* /app/ && \
  rm -rf /app/luadch && \
  rm -rf /app/cfg && \
  rm -rf /app/log && \
